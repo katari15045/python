@@ -1,4 +1,5 @@
 from matplotlib import pyplot
+import time
 
 # Updates the data to Plot
 def update(length):
@@ -9,6 +10,7 @@ def update(length):
         x.append(count)
         y.append(2*count)
         count = count+1
+    time.sleep(2)
     return x, y
 
 def real_time_plot():
@@ -16,8 +18,8 @@ def real_time_plot():
     while(count <= 9):
         x, y = update(count)
         pyplot.scatter(x, y, s=30, c="r")
-        # Pauses for 1 second
-        pyplot.pause(1)
+        # Pauses for .05 seconds
+        pyplot.pause(0.05)
         count = count+1
 
 real_time_plot()
