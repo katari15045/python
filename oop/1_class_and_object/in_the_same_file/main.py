@@ -1,6 +1,6 @@
 class Car:
     name="Baleno"
-    # All methods in a class should have self as first argument
+    # All non-static methods in a class should have self as first argument
     def turn_left(self):
         print("Turning Left")
 
